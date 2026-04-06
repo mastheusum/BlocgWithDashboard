@@ -7,6 +7,8 @@ require_relative 'controllers/post_controller'
 require_relative 'controllers/user_controller'
 require_relative 'controllers/session_controller'
 
+Mongoid.load!("config/mongoid.yml", :development)
+
 use Rack::Cors do
   allow do
     origins '*'
